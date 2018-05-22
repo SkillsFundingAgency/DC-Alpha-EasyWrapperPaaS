@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Processes>
+  <Validation>
+    <Rulebases>
+      <Rulebase>FD</Rulebase>
+      <Rulebase>VAL</Rulebase>
+      <Rulebase>VALDP</Rulebase>
+      <!--<Rulebase>ESF_VAL</Rulebase>-->
+    </Rulebases>
+  </Validation>
+  <Calculation>
+    <Rulebases>
+      <Rulebase>SFA</Rulebase>
+      <Rulebase>EFA</Rulebase>
+      <Rulebase>ALB</Rulebase>
+      <!--<Rulebase>ESF</Rulebase>-->
+      <Rulebase>TBL</Rulebase>
+      <Rulebase>AEC</Rulebase>
+      <Rulebase>EFA_SFA</Rulebase>
+    </Rulebases>
+  </Calculation>
+</Processes>

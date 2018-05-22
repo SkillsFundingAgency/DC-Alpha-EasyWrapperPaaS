@@ -1,0 +1,7 @@
+<Message xmlns="SFA/ILR/2016-17" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+$(XMLScript:Header.sql)
+$(XMLScript:SourceFiles.sql)
+<LearningProvider><UKPRN>$(UKPRN)</UKPRN></LearningProvider>
+$(XMLScript:Learner.sql)
+$(XMLScript:LearnerDestinationAndProgression.sql)
+</Message>

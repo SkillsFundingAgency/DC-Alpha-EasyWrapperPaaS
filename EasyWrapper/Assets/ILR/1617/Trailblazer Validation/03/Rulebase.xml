@@ -1,0 +1,3 @@
+<Rulebase xslFile="ILR Trailblazer Validation - Input_XSLT.xsl" year="1617" configFile="TBLVAL_OPAConfigILR_1617.xml" shortName="TBLVAL" name="ILR Trailblazer Validation" wrapperType="DLL" createTables="TBLVAL_Tables.sql" createProcedures="TBLVAL_StoredProcedures.sql">
+  <preRunSP name="[Rulebase].[TBLVAL_Insert_Cases]" timeout="600" />
+</Rulebase>

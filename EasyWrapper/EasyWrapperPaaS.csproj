@@ -1,0 +1,1940 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EasyWrapper</RootNamespace>
+    <AssemblyName>EasyWrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>..\Libs\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\Libs\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging.Database">
+      <HintPath>..\Libs\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\Libs\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\Libs\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.ConfigurationManager.3.2.3\lib\net40\Microsoft.WindowsAzure.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.11\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="OPAWrapperLIB">
+      <HintPath>..\Libs\OPAWrapperLIB.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.Determinations.Engine">
+      <HintPath>..\Libs\Oracle.Determinations.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.Determinations.Masquerade">
+      <HintPath>..\Libs\Oracle.Determinations.Masquerade.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Log" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Executor\CalculationExecutor.cs" />
+    <Compile Include="Executor\IExecute.cs" />
+    <Compile Include="Executor\IExecuteAll.cs" />
+    <Compile Include="Executor\IExecuteCalculation.cs" />
+    <Compile Include="Executor\IExecuteSingleRulebase.cs" />
+    <Compile Include="Executor\IExecuteValidation.cs" />
+    <Compile Include="Executor\Service\DataCopy.cs" />
+    <Compile Include="Executor\Service\GetRulebases.cs" />
+    <Compile Include="Executor\Service\ICopyData.cs" />
+    <Compile Include="Executor\Service\ICopyResults.cs" />
+    <Compile Include="Executor\Service\ICreateIntraExternalData.cs" />
+    <Compile Include="Executor\Service\ICreateIntra.cs" />
+    <Compile Include="Executor\Service\IGetRulebases.cs" />
+    <Compile Include="Executor\Service\IntraCreatorExternalData.cs" />
+    <Compile Include="Executor\Service\IntraCreator.cs" />
+    <Compile Include="Executor\Service\IRunRulebases.cs" />
+    <Compile Include="Executor\Service\ITransform.cs" />
+    <Compile Include="Executor\Service\ResultsCopier.cs" />
+    <Compile Include="Executor\Service\RulebaseRunner.cs" />
+    <Compile Include="Executor\Service\Transformer.cs" />
+    <Compile Include="Executor\SingleExecutor.cs" />
+    <Compile Include="Executor\ValidationExecutor.cs" />
+    <Compile Include="Exports\AbstractExporter.cs" />
+    <Compile Include="Exports\IExporter.cs" />
+    <Compile Include="Exports\IXDSExporter.cs" />
+    <Compile Include="Exports\XDSExporter.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Prompt.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferenceData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceData.Designer.cs">
+      <DependentUpon>ReferenceData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporting\IReport.cs" />
+    <Compile Include="Reporting\Reporter.cs" />
+    <Compile Include="Writers\Concrete\CSVWriter.cs" />
+    <Compile Include="Writers\Contract\ICSVWriter.cs" />
+    <Compile Include="Writers\Contract\IDocumentWriter.cs" />
+    <Compile Include="Writers\Contract\IWriter.cs" />
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferenceData.resx">
+      <DependentUpon>ReferenceData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="NLog.config" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Assets\ILR\1516\24+ Loans Funding Calc\24+ Loans Bursary 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\Derived Variables\Derived Variables 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\EFA Funding Calc\EFA Funding Calc 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\ESF Funding Calc\ESF 1516 Funding Calc.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\ESF Validation R13\ESF Validation 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\ESF Validation\ESF Validation 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\Trailblazer Funding Calc\Trailblazer Funding Calc 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\Validation FD - Learner\FD Validation 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\SFA Funding Calc\SFA Funding Calc 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\Trailblazer Validation\Trailblazer Validation 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1516\Validation - Learner\Validation 15_16.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\09\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\10\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\11\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\12\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\13\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\14\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\15\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\16\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1617\17\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\09\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\10\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\11\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\12\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\13\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\14\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\15\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\16\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\AEC 1718\17\Apprenticeships Earnings Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\ALB Calculation\03\Loans Bursary 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\Derived Variables\03\Derived Variables 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\EFA Funding Calc\04\EFA Funding Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\EFA SFA Periodisation\01\EFA Periodisation.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\ESF Funding Calc\05\ESF 1617 Funding Calc.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\ESF Funding Calc\06\ESF 1617 Funding Calc.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\ESF Validation\01\ESF Validation 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\Learner Validation\05\Validation 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\Learner Validation\06\Validation 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\Learner Validation\07\Validation 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\Validation DP 16_17.zip" />
+    <None Include="Assets\ILR\1617\SFA Funding Calc\02\SFA Funding Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\Trailblazer Funding Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1617\Trailblazer Validation\03\Trailblazer Validation 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\AEC\01\Apprenticeships Earnings Calc 17_18.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\ALB\01\Loans Bursary 17_18.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\VALDP\01\Validation DP 17_18.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\EFA\01\EFA Funding Calc 16_17.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\EFA_SFA\01\EFA Periodisation.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\ESF_VAL\01\ESF Validation 17_18.zip" />
+    <None Include="Assets\ILR\1718\VAL\01\Validation 17_18.zip" />
+    <None Include="Assets\ILR\1718\VAL\02\Validation 17_18.zip" />
+    <None Include="Assets\ILR\1718\VAL\03\Validation 17_18.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\SFA\01\SFA Funding Calc 17_18.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\TBL\01\Trailblazer Funding Calc 17_18.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\ILR\1718\VAL\04\Validation 17_18.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\ILR\1718\99 ILR External Data Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\CopyScriptPaaS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\04\VAL_StoredProceduresPaaS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ExecConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1516\01 Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\24+ Loans Funding Calc\ALB_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\24+ Loans Funding Calc\ALB_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\24+ Loans Funding Calc\ALB_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\24+ Loans Funding Calc\DCSS 1516 24+ Loans Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\24+ Loans Funding Calc\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Derived Variables\DCSS 1516 Derived Variables - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Derived Variables\DV_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Derived Variables\DV_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Derived Variables\DV_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Derived Variables\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\EFA Funding Calc\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\EFA Funding Calc\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\EFA Funding Calc\DCSS 1516 EFA Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\EFA Funding Calc\EFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\EFA Funding Calc\EFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\EFA Funding Calc\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Funding Calc\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Funding Calc\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Funding Calc\DCSS 1516 ESF Funding Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Funding Calc\ESF_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Funding Calc\ESF_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Funding Calc\ESF_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Funding Calc\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation R13\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation R13\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation R13\ESFVAL_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation R13\ESFVAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation R13\ESFVAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation R13\ILR ESF Validation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation R13\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation\ESFVAL_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation\ESFVAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation\ESFVAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation\ILR ESF Validation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\ESF Validation\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\SFA Funding Calc\DCSS 1516 SFA Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\SFA Funding Calc\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\SFA Funding Calc\SFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\SFA Funding Calc\SFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Funding Calc\DCSS 1516 Trailblazer Funding Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Funding Calc\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Funding Calc\TBL_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Funding Calc\TBL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Funding Calc\TBL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Validation\DCSS 1516 Trailblazer Validation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Validation\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Validation\TBLVAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Validation\TBLVAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\UKPRN_List.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation - Learner\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation - Learner\VAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation - Learner\VAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation FD - Learner\DCSS 1516 Validation FD - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation - Learner\DCSS 1516 Validation Learner - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\EFA Funding Calc\EFA_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation FD - Learner\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation FD - Learner\VALFD_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation FD - Learner\VALFD_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\01 ILR_Input_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\02 ILR_Valid_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\03 Transform_Input_To_Valid.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\04 Clear_Down_SPs.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\05 Valid views.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\09\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\10\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\11\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\12\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\13\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\14\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\15\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\16\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\deleteScript.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1617\17\tableStructCheck.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\09\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\10\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\11\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\12\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\13\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\14\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\15\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\16\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\AEC_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\deleteScript.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\AEC 1718\17\tableStructCheck.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ALB Calculation\03\ALB_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ALB Calculation\03\ALB_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ALB Calculation\03\ALB_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ALB Calculation\03\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ALB Calculation\03\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ALB Calculation\03\ILR 24+ Loans Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ALB Calculation\03\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Derived Variables\03\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Derived Variables\03\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Derived Variables\03\DV_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Derived Variables\03\DV_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Derived Variables\03\DV_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Derived Variables\03\ILR Derived Variables - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Derived Variables\03\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA Funding Calc\04\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA Funding Calc\04\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA Funding Calc\04\EFA_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA Funding Calc\04\EFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA Funding Calc\04\EFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA Funding Calc\04\ILR EFA Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA Funding Calc\04\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA SFA Periodisation\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA SFA Periodisation\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA SFA Periodisation\01\EFA_SFA_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA SFA Periodisation\01\EFA_SFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA SFA Periodisation\01\EFA_SFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA SFA Periodisation\01\ILR EFA Periodisation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\EFA SFA Periodisation\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\01 ILR_Input_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\02 FD Table.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\02 ILR_Valid_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\03 Transform_Input_To_Valid.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\05 Valid views.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\AEC_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\AEC_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\AEC_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\Copy_Multiple_ILR_To_Intrajob.sql" />
+    <Content Include="Assets\ILR\1718\AEC\01\Copy_Single_ILR_To_Intrajob.sql" />
+    <Content Include="Assets\ILR\1718\AEC\01\CustomPersistResults.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\deleteScript.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\ILR Apprenticeship Earnings Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC\01\tableStructCheck.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\AEC_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\CopyInvalidToDEDS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\CopyScript.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB\01\ALB_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB\01\ALB_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB\01\ALB_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB\01\ILR 24+ Loans Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ALB\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\04 ErrorMessageLookUpInserts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\DEDS_Invalid.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\DEDS_Rulebase.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\DEDS_Valid.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\DV_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\FD_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ILR_DedsSchema.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ILR_Invalid_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\01_GetSFAEFAFundingClaimForType.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\01_GetSFAEmpPayment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\01_GetSFAFundingForType.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\01_GetSFALearnSuppFundCash.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\01_GetSFAOnProgPayment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\01_GetSFATrailblazerLearnSuppFundCash.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\01_GetSFATrailblazerProgPayment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\02_GetSFAProgrammeFunding.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Functions\02_GetSFASupportFunding.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\AppsIndicativeEarningsReportCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\AppsIndicativeEarningsReportGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\AppsIndicativeEarningsReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\CommunityLearningReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\CommunityLearningReportParameters.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\CommunityLearningReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\EFA1619FundingByStudentCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\EFA1619FundingByStudentReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\EFA1619FundingByStudentReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\EFAHNSDetailCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\EFAHNSDetailReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\EFAHNSDetailReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetALLBOccupancyReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetALLBOccupancyReportDataCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetEFAFundingClaimReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetEFAFundingClaimReportParameters.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetEFAHNSSummaryReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetEFAHNSSummaryReportParameters.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetEFAMathsAndEnglishReportCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetEFAMathsAndEnglishReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetFM35SummFundingByLearnerCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetFM35SummFundingByLearnerData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetPFRSummaryReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetPFRSummaryReportParameters.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\GetRuleViolationSummaryReportData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PFRMainOccupancyReportCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PFRMainOccupancyReportGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PFRMainOccupancyReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PopulateALLBOccupancyReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PopulateEFAEnglishAndMathsReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PopulateEFAFundingClaimReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PopulateEFAHNSSummaryReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PopulateFM35SummFundingByLearner.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\PopulatePFRSummaryReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingClaimReportCsvGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingClaimReportCsvGetDataCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingClaimReportExcelGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingClaimReportExcelPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingClaimReportParameters.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingModel35SummaryReportCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingModel35SummaryReportCSVGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingModel35SummaryReportGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingModel35SummaryReportParameters.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\SFAFundingModel35SummaryReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\TrailblazerApprenticeshipsOccupancyReportCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\TrailblazerApprenticeshipsOccupancyReportGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\TrailblazerApprenticeshipsOccupancyReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\TrailblazerEmployerIncentivesReportCount.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\TrailblazerEmployerIncentivesReportGetData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Stored Procedures\TrailblazerEmployerIncentivesReportPopulateData.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\00 CreateSchema.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\01_EFAFundingClaimReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\02_EFAMathsAndEnglishReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\03_EFA1619FundingByStudent.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\03_EFAHNSDetailReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\03_EFAHNSSummaryReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\04_PFRMainOccupancyReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\05_SFAFundingClaimReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\06_ALLBOccupancyReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\07_FM35SummFundingByLearner.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\AppsIndicativeEarningsReportOutput.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\CommunityLearningReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\FundingSummary.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\SFAFundingModel35SummaryReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\TrailblazerApprenticeshipsOccupancyReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\TrailblazerEmployerIncentivesReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\ViolationReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Tables\ViolationSummaryReport.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\02 ILR_RuleViolationSummaryView.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\03 ILR_RuleViolationView.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\04 HighNeedsStudentsReportView.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\05 PFRMainOccupancyReportView.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\06 CL SummaryOfLearnersFAMS.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\06 PFRTrailblazerApprenticeshipsOccupancyReport_PSDM_FAM_HelperView.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\07 PFRTrailblazerApprenticeshipsOccupancyReportView.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\AppsIndicitiveReportPMRsCurrentYear.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\AppsIndicitiveReportPMRsPreviousYears.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\ValidLearnerEmpStatsBeforeLearnStartDate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\Reporting\Views\ValidLearningDeliveryFAM_ACT_LSF_EarliestAndLatestDates.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\TBL_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP\01\ILR Validation DP - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP\01\VALDP_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP\01\VALDP_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP\01\VALDP_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA\01\EFA_SFA_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA\01\EFA_SFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA\01\EFA_SFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA\01\ILR EFA Periodisation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA_SFA\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\05\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\05\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\05\ESF_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\05\ESF_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\05\ESF_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\05\ILR ESF Funding Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\05\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\06\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\06\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\06\ESF_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\06\ESF_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\06\ESF_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\06\ILR ESF Funding Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Funding Calc\06\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Validation\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Validation\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Validation\01\ESFVAL_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Validation\01\ESFVAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Validation\01\ESFVAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Validation\01\ILR ESF Validation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\ESF Validation\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Multiple\SourceFiles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Single\Header.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Single\Learner.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Single\LearnerDestinationAndProgression.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Single\SourceFiles.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Template.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Multiple\Header.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Multiple\Learner.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Export\Multiple\LearnerDestinationAndProgression.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\05\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\05\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\05\ILR Validation Learner - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\05\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\05\VAL_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\05\VAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\05\VAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\06\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\06\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\06\ILR Validation Learner - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\06\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\06\VAL_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\06\VAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\06\VAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\07\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\07\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\07\ILR Validation Learner - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\07\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\07\VAL_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\07\VAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Learner Validation\07\VAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\DCSS Validation DP - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\VALDP_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\VALDP_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\LearnerDestinationandProgression Validation\01\VALDP_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\SFA Funding Calc\02\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\SFA Funding Calc\02\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\SFA Funding Calc\02\ILR SFA Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\SFA Funding Calc\02\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\SFA Funding Calc\02\SFA_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1617\SFA Funding Calc\02\SFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\SFA Funding Calc\02\SFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\ILR Trailblazer Funding Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\TBL_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\TBL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\TrailBlazer Funding Calculation\02\TBL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Trailblazer Validation\03\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Trailblazer Validation\03\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Trailblazer Validation\03\ILR Trailblazer Validation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Trailblazer Validation\03\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Trailblazer Validation\03\TBLVAL_OPAConfigILR_1617.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Trailblazer Validation\03\TBLVAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\Trailblazer Validation\03\TBLVAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1617\UKPRN_List.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\04 Clear_Down_SPs.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA\01\EFA_OPAConfigILR_1617.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA\01\EFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA\01\EFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA\01\ILR EFA Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\EFA\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\03 ErrorMessageLookUpTable.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF\01\ESF_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF\01\ESF_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF\01\ESF_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF\01\ILR ESF Funding Calc - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\ESF_VAL\01\ESFVAL_OPAConfigILR_1718.xml" />
+    <Content Include="Assets\ILR\1718\ESF_VAL\01\ESFVAL_StoredProcedures.sql" />
+    <Content Include="Assets\ILR\1718\ESF_VAL\01\ESFVAL_Tables.sql" />
+    <Content Include="Assets\ILR\1718\ESF_VAL\01\ILR ESF Validation - Input_XSLT.xsl" />
+    <Content Include="Assets\ILR\1718\FD_ILR_StoredProcs.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\02 ILR_Rulebase_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALDP_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VALFD_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\01\ILR Validation Learner - Input_XSLT.xsl" />
+    <Content Include="Assets\ILR\1718\VAL\01\Rulebase.xml" />
+    <Content Include="Assets\ILR\1718\VAL\01\VAL_OPAConfigILR_1718.xml" />
+    <Content Include="Assets\ILR\1718\VAL\01\VAL_Stored_Procedures.sql" />
+    <Content Include="Assets\ILR\1718\VAL\01\VAL_Tables.sql" />
+    <Content Include="Assets\ILR\1718\VAL\02\ILR Validation Learner - Input_XSLT.xsl" />
+    <Content Include="Assets\ILR\1718\VAL\02\Rulebase.xml" />
+    <Content Include="Assets\ILR\1718\VAL\02\VAL_OPAConfigILR_1718.xml" />
+    <Content Include="Assets\ILR\1718\VAL\02\VAL_Stored_Procedures.sql" />
+    <Content Include="Assets\ILR\1718\VAL\02\VAL_Tables.sql" />
+    <Content Include="Assets\ILR\1718\VAL\03\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\03\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\03\ILR Validation Learner - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\03\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\03\VAL_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\03\VAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\03\VAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\MultipleCopyScript.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA\01\Copy_Multiple_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA\01\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA\01\ILR SFA Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA\01\SFA_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA\01\SFA_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\SFA\01\SFA_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\TBL\01\ILR Trailblazer Funding Calculation - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\TBL\01\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\TBL\01\TBL_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\TBL\01\TBL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\TBL\01\TBL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\UKPRN_List.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\04\Copy_Single_ILR_To_Intrajob.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\04\ILR Validation Learner - Input_XSLT.xsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\04\Rulebase.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\04\VAL_OPAConfigILR_1718.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\04\VAL_StoredProcedures.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL\04\VAL_Tables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1718\VAL_Results_Copy.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Rulebases.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Assets\ILR\1516\SFA Funding Calc\SFA_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Trailblazer Validation\TBLVAL_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation FD - Learner\VALFD_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\ILR\1516\Validation - Learner\VAL_OPAConfigILR_1516.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestHarness.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\ILR\1718\NCS Val\01\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SqlXmlLoad\SqlXMLOperations.csproj">
+      <Project>{5020E72C-3C59-4043-A260-19DB8B793D3A}</Project>
+      <Name>SqlXMLOperations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XmlLoader\XMLLoader.csproj">
+      <Project>{4b929641-e2de-4c5b-960d-a586e0a0dbbb}</Project>
+      <Name>XMLLoader</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

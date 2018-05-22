@@ -1,0 +1,5 @@
+<Rulebase xslFile="ILR EFA Periodisation - Input_XSLT.xsl" year="1617" configFile="EFA_SFA_OPAConfigILR_1617.xml" shortName="EFA_SFA" name="ILR EFA Periodisation" wrapperType="DLL" createTables="EFA_SFA_Tables.sql" createProcedures="EFA_SFA_StoredProcedures.sql">
+  <preRunSP name="[dbo].[TransformInputToValid]" timeout="600" />
+  <preRunSP name="[Rulebase].[EFA_SFA_Insert_Cases]" timeout="600" />
+  <postRunSP name="[Rulebase].[EFA_SFA_PivotTemporals_Learner]" timeout="600" />
+</Rulebase>

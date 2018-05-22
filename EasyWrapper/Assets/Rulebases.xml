@@ -1,0 +1,76 @@
+﻿<Rulebases>
+    <Rulebase xslFile="DCSS 1516 Validation FD - Input_XSLT.xsl"
+              year="1516"
+              configFile="VALFD_OPAConfigILR_1516.xml"
+              shortName="VALFD"
+              name="DCSS 1516 Validation FD"
+              wrapperType="DLL">
+        <preRunSP name="[Rulebase].[VALFD_Insert_Cases]"
+                  timeout="600" />
+    </Rulebase>
+    <Rulebase xslFile="DCSS 1516 Validation Learner - Input_XSLT.xsl"
+              year="1516"
+              configFile="VAL_OPAConfigILR_1516.xml"
+              shortName="VAL"
+              name="DCSS 1516 Validation Learner"
+              wrapperType="DLL">
+        <preRunSP name="[Rulebase].[VAL_Insert_Cases]"
+                  timeout="600" />
+    </Rulebase>
+    <Rulebase xslFile="DCSS 1516 Trailblazer Validation - Input_XSLT.xsl"
+              year="1516"
+              configFile="TBLVAL_OPAConfigILR_1516.xml"
+              shortName="TBLVAL"
+              name="DCSS 1516 Trailblazer Validation"
+              wrapperType="DLL">
+        <preRunSP name="[Rulebase].[TBLVAL_Insert_Cases]" />
+    </Rulebase>
+    <Rulebase xslFile="DCSS 1516 SFA Calculation - Input_XSLT.xsl"
+              year="1516"
+              configFile="SFA_OPAConfigILR_1516.xml"
+              shortName="SFA"
+              name="DCSS 1516 SFA Calculation"
+              wrapperType="DLL">
+        <preRunSP name="[dbo].[TransformInputToValid]"
+                  timeout="600" />
+        <preRunSP name="[Rulebase].[SFA_Insert_Cases]"
+                  timeout="600" />
+        <postRunSP name="[Rulebase].[SFA_PivotTemporals_LearningDelivery]" />
+    </Rulebase>
+    <Rulebase xslFile="DCSS 1516 24+ Loans Calculation - Input_XSLT.xsl"
+              year="1516"
+              configFile="ALB_OPAConfigILR_1516.xml"
+              shortName="ALB"
+              name="DCSS 1516 24+ Loans Calculation"
+              wrapperType="DLL">
+        <preRunSP name="[dbo].[TransformInputToValid]"
+                  timeout="600" />
+        <preRunSP name="[Rulebase].[ALB_Insert_Cases]"
+                  timeout="600" />
+        <postRunSP name="[Rulebase].[ALB_PivotTemporals_Learner]" />
+        <postRunSP name="[Rulebase].[ALB_PivotTemporals_LearningDelivery]" />
+    </Rulebase>
+    <Rulebase xslFile="DCSS 1516 Trailblazer Funding Calculation - Input_XSLT.xsl"
+              year="1516"
+              configFile="TBL_OPAConfigILR_1516.xml"
+              shortName="TBL"
+              name="DCSS 1516 Trailblazer Funding Calculation"
+              wrapperType="DLL">
+        <preRunSP name="[dbo].[TransformInputToValid]"
+                  timeout="600" />
+        <preRunSP name="[Rulebase].[TBL_Insert_Cases]"
+                  timeout="600" />
+        <postRunSP name="[Rulebase].[TBL_PivotTemporals_LearningDelivery]" />
+    </Rulebase>
+    <Rulebase xslFile="DCSS 1516 EFA Calculation - Input_XSLT.xsl"
+              year="1516"
+              configFile="EFA_OPAConfigILR_1516.xml"
+              shortName="EFA"
+              name="DCSS 1516 EFA Calculation"
+              wrapperType="DLL">
+        <preRunSP name="[dbo].[TransformInputToValid]"
+                  timeout="600" />
+        <preRunSP name="[Rulebase].[EFA_Insert_Cases]"
+                  timeout="600" />
+    </Rulebase>
+</Rulebases>

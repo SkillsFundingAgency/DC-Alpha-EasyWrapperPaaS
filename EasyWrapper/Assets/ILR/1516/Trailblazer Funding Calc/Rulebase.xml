@@ -1,0 +1,5 @@
+<Rulebase xslFile="DCSS 1516 Trailblazer Funding Calculation - Input_XSLT.xsl" year="1516" configFile="TBL_OPAConfigILR_1516.xml" shortName="TBL" name="DCSS 1516 Trailblazer Funding Calculation" wrapperType="DLL" createTables="TBL_Tables.sql" createProcedures="TBL_StoredProcedures.sql">
+  <preRunSP name="[dbo].[TransformInputToValid]" timeout="600" />
+  <preRunSP name="[Rulebase].[TBL_Insert_Cases]" timeout="600" />
+  <postRunSP name="[Rulebase].[TBL_PivotTemporals_LearningDelivery]" timeout="600" />
+</Rulebase>

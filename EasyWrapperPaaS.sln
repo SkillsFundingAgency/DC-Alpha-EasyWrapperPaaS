@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyWrapperPaaS", "EasyWrapper\EasyWrapperPaaS.csproj", "{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlXMLOperations", "SqlXmlLoad\SqlXMLOperations.csproj", "{5020E72C-3C59-4043-A260-19DB8B793D3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLLoader", "XmlLoader\XMLLoader.csproj", "{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML2SQL", "XML2SQL\XML2SQL.csproj", "{D364B68B-A613-44FE-9531-0A59BEC959C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3FE1008-B3B2-4B52-9042-1C509FA9895D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{8B802A8E-8E89-41B6-9CD7-51A44AD8039D}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\Interop.SQLXMLBULKLOADLib.dll = Libs\Interop.SQLXMLBULKLOADLib.dll
+		Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll = Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Libs\Microsoft.Practices.EnterpriseLibrary.Data.dll = Libs\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Libs\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll = Libs\Microsoft.Practices.EnterpriseLibrary.Logging.Database.dll
+		Libs\Microsoft.Practices.EnterpriseLibrary.Logging.dll = Libs\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+		Libs\Microsoft.Practices.ServiceLocation.dll = Libs\Microsoft.Practices.ServiceLocation.dll
+		Libs\Microsoft.Practices.Unity.dll = Libs\Microsoft.Practices.Unity.dll
+		Libs\Microsoft.Practices.Unity.Interception.dll = Libs\Microsoft.Practices.Unity.Interception.dll
+		Libs\OPAWrapperLIB.dll = Libs\OPAWrapperLIB.dll
+		Libs\Oracle.Determinations.Engine.dll = Libs\Oracle.Determinations.Engine.dll
+		Libs\Oracle.Determinations.Masquerade.dll = Libs\Oracle.Determinations.Masquerade.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Debug|x86.ActiveCfg = Debug|x86
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Debug|x86.Build.0 = Debug|x86
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Release|x86.ActiveCfg = Release|x86
+		{047FC2AA-ACC9-4EBF-B22B-09A2060FE53F}.Release|x86.Build.0 = Release|x86
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Debug|x86.Build.0 = Debug|Any CPU
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Release|x86.ActiveCfg = Release|Any CPU
+		{5020E72C-3C59-4043-A260-19DB8B793D3A}.Release|x86.Build.0 = Release|Any CPU
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Debug|x86.ActiveCfg = Debug|x86
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Debug|x86.Build.0 = Debug|x86
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Release|x86.ActiveCfg = Release|x86
+		{4B929641-E2DE-4C5B-960D-A586E0A0DBBB}.Release|x86.Build.0 = Release|x86
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Debug|x86.ActiveCfg = Debug|x86
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Debug|x86.Build.0 = Debug|x86
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Release|x86.ActiveCfg = Release|x86
+		{D364B68B-A613-44FE-9531-0A59BEC959C2}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8B802A8E-8E89-41B6-9CD7-51A44AD8039D} = {C3FE1008-B3B2-4B52-9042-1C509FA9895D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {027362C6-D219-4A28-976A-F13B29FD2760}
+	EndGlobalSection
+EndGlobal

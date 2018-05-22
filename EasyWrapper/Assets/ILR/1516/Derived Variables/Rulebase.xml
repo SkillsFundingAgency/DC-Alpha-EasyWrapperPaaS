@@ -1,0 +1,4 @@
+<Rulebase xslFile="DCSS 1516 Derived Variables - Input_XSLT.xsl" year="1516" configFile="DV_OPAConfigILR_1516.xml" shortName="DV" name="DCSS 1516 Derived Variables" wrapperType="DLL" createTables="DV_Tables.sql" createProcedures="DV_StoredProcedures.sql">
+  <preRunSP name="[dbo].[TransformInputToValid]" timeout="600" />
+  <preRunSP name="[Rulebase].[DV_Insert_Cases]" timeout="600" />
+</Rulebase>

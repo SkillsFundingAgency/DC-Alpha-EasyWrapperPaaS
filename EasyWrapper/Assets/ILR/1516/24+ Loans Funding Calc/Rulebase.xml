@@ -1,0 +1,6 @@
+<Rulebase xslFile="DCSS 1516 24+ Loans Calculation - Input_XSLT.xsl" year="1516" configFile="ALB_OPAConfigILR_1516.xml" shortName="ALB" name="DCSS 1516 24+ Loans Calculation" wrapperType="DLL" createTables="ALB_Tables.sql" createProcedures="ALB_StoredProcedures.sql">
+  <preRunSP name="[dbo].[TransformInputToValid]" timeout="600" />
+  <preRunSP name="[Rulebase].[ALB_Insert_Cases]" timeout="600" />
+  <postRunSP name="[Rulebase].[ALB_PivotTemporals_Learner]" timeout="600" />
+  <postRunSP name="[Rulebase].[ALB_PivotTemporals_LearningDelivery]" timeout="600" />
+</Rulebase>

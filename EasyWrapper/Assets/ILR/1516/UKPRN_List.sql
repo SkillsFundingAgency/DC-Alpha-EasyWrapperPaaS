@@ -1,0 +1,9 @@
+select
+	ukprn
+from
+	[$(FromILRDatabase)].[$(FromILRSchema)].[LearningProvider]
+where
+	ukprn in (10002872,10005262,10021172,10025727,10003816,10004177,10004772,10005204,10001639,10001640,10002761,10005200,10007623,10019581)
+--	ukprn in (10004772)
+order by 
+	ukprn

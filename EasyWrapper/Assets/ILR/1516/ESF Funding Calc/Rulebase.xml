@@ -1,0 +1,5 @@
+<Rulebase xslFile="DCSS 1516 ESF Funding Calc - Input_XSLT.xsl" year="1516" configFile="ESF_OPAConfigILR_1516.xml" shortName="ESF" name="DCSS 1516 ESF Funding Calc" wrapperType="DLL" createTables="ESF_Tables.sql" createProcedures="ESF_StoredProcedures.sql">
+  <preRunSP name="[dbo].[TransformInputToValid]" timeout="600" />
+  <preRunSP name="[Rulebase].[ESF_Insert_Cases]" timeout="600" />
+  <postRunSP name="[Rulebase].[ESF_PivotTemporals_LearningDeliveryDeliverable]" timeout="600" />
+</Rulebase>
